@@ -3,6 +3,7 @@ import "package:provider/provider.dart";
 import "package:scrabbly/pages/favorites_page.dart";
 import "package:scrabbly/pages/generator_page.dart";
 import "package:scrabbly/pages/review_page.dart";
+import "package:scrabbly/pages/review_topics_page.dart";
 import 'package:scrabbly/pages/search_page.dart';
 import "package:scrabbly/pages/settings_page.dart";
 import "package:scrabbly/providers/word_review_provider.dart";
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var colorScheme = Theme.of(context).colorScheme;
+
     Widget page;
     switch (selectedIndex) {
       case 0:
@@ -54,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = SearchPage();
         break;
       case 2:
-        page = ReviewPage();
+        page = ReviewTopicsPage();
         break;
       case 3:
         page = FavoritesPage();

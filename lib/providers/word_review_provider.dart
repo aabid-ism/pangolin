@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:scrabbly/enums/lexicon.dart';
 import 'package:scrabbly/services/save_favorites.dart';
+import 'package:scrabbly/services/save_theme.dart';
 import 'package:scrabbly/words/CSW21/CSW21_2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WordStateProvider extends ChangeNotifier {
+  final String initialThemeString;
+  WordStateProvider(this.initialThemeString);
   late String current = "";
   late int currentIndex = 0;
   late Lexicon lexicon;
@@ -19,9 +22,16 @@ class WordStateProvider extends ChangeNotifier {
   var favorites = <String>[];
   late SharedPreferences prefs;
 
+  late String themeColor = initialThemeString;
   // void initializeFavorites() async {
   //   prefs = await SharedPreferences.getInstance();
   // }
+
+  void changeThemeColor(String inputColor) {
+    themeColor = inputColor;
+    saveThemeColor(themeColor);
+    notifyListeners();
+  }
 
   Future<void> initializeAppState(String? inputLexicon) async {
     if (inputLexicon == Lexicon.NWL20.lexiconString) {
@@ -29,6 +39,7 @@ class WordStateProvider extends ChangeNotifier {
     } else {
       lexicon = Lexicon.CSW21;
     }
+    themeColor = await getThemeColor() ?? "Orange";
     notifyListeners();
   }
 
@@ -53,7 +64,11 @@ class WordStateProvider extends ChangeNotifier {
     List<String> favorites = await loadFavorites();
     wordList = favorites;
     currentIndex = 0;
-    current = wordList[0];
+    if (wordList.isEmpty) {
+      current = "SCRABBLE";
+    } else {
+      current = wordList[0];
+    }
   }
 
   void changeSearchWordList(List<String> inputWordList) {
@@ -63,6 +78,14 @@ class WordStateProvider extends ChangeNotifier {
 
   void launchReview(Function searchFunction) async {
     wordList = await searchFunction();
+    isReviewDone = false;
+    currentIndex = 0;
+    history = [];
+    current = wordList[0];
+  }
+
+  void launchForReview(var words) async {
+    wordList = words;
     isReviewDone = false;
     currentIndex = 0;
     history = [];
@@ -116,15 +139,7 @@ class WordStateProvider extends ChangeNotifier {
   }
 
   void launchStartUpWords() {
-    wordList = [
-      "Scrabble",
-      "is",
-      "fun",
-      "intense",
-      "creative",
-      "social",
-      "beautiful"
-    ];
+    wordList = ["SCRABBLE", "IS", "FUN", "INTENSE", "CREATIVE", "BEAUTIFUL"];
     for (var word in wordList) {
       saveToFavorites(word);
     }

@@ -271,6 +271,10 @@ Future<List<String>> _searchForIncludes(
 
 Future<List<String>> _searchForProbability(
     int length, int min, int max, List<String>? correctList) async {
+  //max is greater than length of correctList
+  if (max > correctList!.length) {
+    max = correctList.length;
+  }
   int protectedMin = min - 1 < 0 ? 0 : min - 1;
   List<String> returnList = correctList!.sublist(protectedMin, max);
 

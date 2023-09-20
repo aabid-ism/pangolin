@@ -6,7 +6,9 @@ import "package:scrabbly/providers/word_review_provider.dart";
 import "../widgets/definitions_popup.dart";
 
 class CustomReviewPage extends StatefulWidget {
-  const CustomReviewPage({super.key});
+  final String? appBarTitle; // Declare an optional Key argument
+
+  const CustomReviewPage({Key? key, this.appBarTitle}) : super(key: key);
 
   @override
   State<CustomReviewPage> createState() => _CustomReviewPageState();
@@ -26,7 +28,10 @@ class _CustomReviewPageState extends State<CustomReviewPage> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Review'),
+        centerTitle: true,
+        title: widget.appBarTitle != null
+            ? Text("${widget.appBarTitle}")
+            : const Text('Review'),
       ),
       body: Center(
         child: Column(

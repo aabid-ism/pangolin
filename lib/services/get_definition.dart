@@ -34,10 +34,14 @@ Future<List<List<String>>> getWordDefinitions(String word) async {
 
       return definitionsList;
     } else {
-      throw Exception('Failed to load word definitions');
+      return [
+        ["N/A", "Couldn't Load Definition"]
+      ];
     }
   } catch (e) {
-    throw Exception('Error: $e');
+    return [
+      ["N/A", "No Definition Found"]
+    ];
   }
 }
 ///////////////////////

@@ -8,7 +8,7 @@ import 'package:scrabbly/providers/word_review_provider.dart';
 void main() {
   late WordStateProvider sut;
   setUp(() {
-    sut = WordStateProvider();
+    sut = WordStateProvider("Emerald");
   });
 
   group('Lexicon Load Up', () {
