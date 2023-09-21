@@ -14,7 +14,6 @@
 
 ![Simulator Screenshot - iPhone 14 - 2023-09-05 at 21 54 15](https://github.com/aabid-ism/pangolin/assets/79525566/eb2df8a0-3547-4ad4-8b7c-a677d951f040)
 
-![Simulator Screenshot - iPhone 14 - 2023-09-05 at 21 54 20](https://github.com/aabid-ism/pangolin/assets/79525566/3a35b92c-8592-427e-a9c3-798565e39948)
 
 ![Simulator Screenshot - iPhone 14 - 2023-09-05 at 21 54 34](https://github.com/aabid-ism/pangolin/assets/79525566/878b9b68-a96f-420a-910f-8edaee9cd446)
 
