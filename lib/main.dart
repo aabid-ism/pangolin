@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
     print("refreshed main.dart");
     return ChangeNotifierProvider(
         create: (context) =>
-            WordStateProvider(widget.initialThemeString ?? "red"),
+            WordStateProvider(widget.initialThemeString ?? "Blue Grey"),
         builder: (context, child) {
           return MaterialApp(
             title: 'Scrabbly',

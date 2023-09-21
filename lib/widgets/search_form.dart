@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:scrabbly/pages/custom_review_page.dart';
 import 'package:scrabbly/providers/word_review_provider.dart';
+import 'package:scrabbly/services/process_definition.dart';
 import 'package:scrabbly/services/search_service.dart';
 import 'package:scrabbly/widgets/definitions_popup.dart';
 import 'package:scrabbly/widgets/download_popup.dart';
@@ -381,7 +382,8 @@ class SearchFormState extends State<SearchForm> {
                     children: [
                       provider.searchWordList.isEmpty
                           ? const SizedBox(height: 1)
-                          : Text("${provider.searchWordList.length} word results")
+                          : Text(
+                              "${provider.searchWordList.length} word results")
                     ],
                   ),
                 ],
@@ -403,16 +405,9 @@ class SearchFormState extends State<SearchForm> {
                               title: TextButton(
                                 style: const ButtonStyle(
                                     alignment: Alignment.topLeft),
-                                onPressed: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return DefinitionsPopup(
-                                        displayWord:
-                                            provider.searchWordList[index],
-                                      );
-                                    },
-                                  );
+                                onPressed: () => {
+                                  processDefinition(
+                                      context, provider.searchWordList[index])
                                 },
                                 child: Text(provider.searchWordList[index]),
                               ),

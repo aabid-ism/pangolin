@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:scrabbly/models/BigCard.dart";
 import "package:scrabbly/providers/word_review_provider.dart";
+import "package:scrabbly/services/process_definition.dart";
+import "package:scrabbly/services/save_review.dart";
 
 import "../widgets/definitions_popup.dart";
 
@@ -69,16 +71,7 @@ class _CustomReviewPageState extends State<CustomReviewPage> {
                 ),
                 const SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return DefinitionsPopup(
-                          displayWord: displayWord,
-                        );
-                      },
-                    );
-                  },
+                  onPressed: () => {processDefinition(context, displayWord)},
                   child: const Text('Definition'),
                 ),
               ],
@@ -93,6 +86,19 @@ class _CustomReviewPageState extends State<CustomReviewPage> {
             const Spacer(flex: 2),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.small(
+        onPressed: () {
+          if (!appState.isReviewDone) {
+            saveReview(context);
+          } else {
+            const snackBar = SnackBar(
+              content: Text('Cannot save a completed review.'),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          }
+        },
+        child: const Icon(Icons.save),
       ),
     );
   }

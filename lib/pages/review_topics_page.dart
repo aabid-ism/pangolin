@@ -7,6 +7,7 @@ import 'package:scrabbly/widgets/review_list/5_letter_list.dart';
 import 'package:scrabbly/widgets/review_list/7_letter_list.dart';
 import 'package:scrabbly/widgets/review_list/7_letter_prob_list.dart';
 import 'package:scrabbly/widgets/review_list/8_letter_prob.dart';
+import 'package:scrabbly/widgets/review_list/saved_list.dart';
 
 class ReviewTopicsPage extends StatefulWidget {
   const ReviewTopicsPage({super.key});
@@ -120,7 +121,7 @@ class _ReviewTopicsPageState extends State<ReviewTopicsPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const SpawnSevenProbReviewList()),
+                      builder: (context) => const SpawnSavedList()),
                 );
               },
             ),

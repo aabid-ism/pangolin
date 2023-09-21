@@ -3,6 +3,7 @@ import "package:provider/provider.dart";
 import "package:scrabbly/models/BigCard.dart";
 import "package:scrabbly/providers/word_review_provider.dart";
 import "package:scrabbly/services/get_definition.dart";
+import "package:scrabbly/services/process_definition.dart";
 import "package:scrabbly/widgets/definitions_popup.dart";
 import "package:scrabbly/widgets/download_popup.dart";
 import "package:scrabbly/widgets/review_list/utils.dart";
@@ -71,51 +72,8 @@ class _GeneratorPageState extends State<GeneratorPage> {
               ),
               const SizedBox(width: 10),
               ElevatedButton(
-                onPressed: () async {
-                  // show circular progress
-                  buildShowDialog(context);
-                  // get definition
-                  var defs = await getWordDefinitions(displayWord);
-                  // await Future.delayed(Duration(seconds: 2));
-                  // pop off circular progress
-                  Navigator.of(context).pop();
-
-                  // show a dialog with defs
-                  // ignore: use_build_context_synchronously
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Text('Word: $displayWord'),
-                          content: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: defs.map((definitionList) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Part of Speech: ${definitionList[0]}',
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text('Definition: ${definitionList[1]}'),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                          actions: <Widget>[
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop(); // Close the dialog
-                              },
-                              child: const Text("Close"),
-                            ),
-                          ],
-                        );
-                      });
+                onPressed: () => {
+                  processDefinition(context, displayWord),
                 },
                 child: const Text('Definition'),
               ),
