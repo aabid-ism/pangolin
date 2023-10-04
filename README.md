@@ -1,5 +1,11 @@
 # pangolin
 
+## Update 01/10/2023
+The app is approved on Google Play store!
+[See Pangolin on Playstore](https://play.google.com/store/apps/details?id=global.serendib.pangolin)
+
+Waiting for App Store approval!
+
 ## An app that aids competitive Scrabble players to search, learn and review word lists
 
 ## Update 09/05/2023
