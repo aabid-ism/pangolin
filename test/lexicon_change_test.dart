@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:scrabbly/enums/lexicon.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
+import 'package:pangolin/enums/lexicon.dart';
+import 'package:pangolin/providers/word_review_provider.dart';
 
 // class MockNewsService extends Mock implements NewsService {}
 

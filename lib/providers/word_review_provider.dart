@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:scrabbly/enums/lexicon.dart';
-import 'package:scrabbly/services/save_favorites.dart';
-import 'package:scrabbly/services/save_theme.dart';
-import 'package:scrabbly/words/CSW21/CSW21_2.dart';
+import 'package:pangolin/enums/lexicon.dart';
+import 'package:pangolin/services/save_favorites.dart';
+import 'package:pangolin/services/save_theme.dart';
+import 'package:pangolin/words/CSW21/CSW21_2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WordStateProvider extends ChangeNotifier {
@@ -47,7 +47,7 @@ class WordStateProvider extends ChangeNotifier {
     // history = ["hi"];
 
     await loadFavoritesToWordList();
-    if (wordList != null && wordList.isNotEmpty) {
+    if (wordList.isNotEmpty) {
     } else {
       launchStartUpWords(); // makes WordList = ["Scrabble", "is" ...]
     }

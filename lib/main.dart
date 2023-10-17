@@ -2,13 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:scrabbly/pages/favorites_page.dart';
-import 'package:scrabbly/pages/generator_page.dart';
-import 'package:scrabbly/pages/home_page.dart';
-import 'package:scrabbly/pages/search_page.dart';
-import 'package:scrabbly/services/save_theme.dart';
-import 'package:scrabbly/widgets/download_popup.dart';
+import 'package:pangolin/pages/favorites_page.dart';
+import 'package:pangolin/pages/generator_page.dart';
+import 'package:pangolin/pages/home_page.dart';
+import 'package:pangolin/pages/search_page.dart';
+import 'package:pangolin/services/save_theme.dart';
+import 'package:pangolin/widgets/download_popup.dart';
 import "providers/word_review_provider.dart";
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -50,7 +49,7 @@ class _MyAppState extends State<MyApp> {
             WordStateProvider(widget.initialThemeString ?? "Blue Grey"),
         builder: (context, child) {
           return MaterialApp(
-            title: 'Scrabbly',
+            title: 'pangolin',
             theme: ThemeData(
               useMaterial3: true,
               colorScheme: ColorScheme.fromSeed(

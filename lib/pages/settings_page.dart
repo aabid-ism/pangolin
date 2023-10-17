@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:scrabbly/providers/word_review_provider.dart";
-import "package:scrabbly/widgets/download_popup.dart";
+import "package:pangolin/providers/word_review_provider.dart";
+import "package:pangolin/widgets/download_popup.dart";
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -50,7 +50,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 Row(
                   children: [
                     CircleButton(
-                      Color.fromARGB(255, 172, 122, 13),
+                      const Color.fromARGB(255, 172, 122, 13),
                       () => changeThemeColor("Sepia"),
                     ),
                     const SizedBox(

@@ -1,10 +1,34 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:scrabbly/services/search_service.dart';
+import 'package:pangolin/services/search_service.dart';
 
 void main() {
   group("Anagram Search Functionality Check", () {
     test("Check for Unique Anagram: ARIOTEE (ETAERIO).", () async {
       expect(await searchForAnagrams("ARIOTEE", "CSW21"), ["ETAERIO"]);
+    });
+    test("Testing generateAlphabeticStrings with 1 blank", () async {
+      expect(
+          generateAlphabeticStrings("BAU?"), ["?ABU", "A?BU", "AB?U", "ABU?"]);
+    });
+    test("Testing generateAlphabeticStrings with 1 blank", () async {
+      expect(generateAlphabeticStrings("ZYZZYV?"), [
+        '?VYYZZZ',
+        'V?YYZZZ',
+        'VY?YZZZ',
+        'VYY?ZZZ',
+        'VYYZ?ZZ',
+        'VYYZZ?Z',
+        'VYYZZZ?'
+      ]);
+    });
+    test("Testing generateAlphabeticStrings with 1 blank and duplicate chars",
+        () async {
+      expect(
+          generateAlphabeticStrings("QVV?"), ["?QVV", "Q?VV", "QV?V", "QVV?"]);
+    });
+    test("Testing generateAlphabeticStrings with 2 blanks", () async {
+      expect(generateAlphabeticStrings("VJ??"),
+          ['??JV', '?J?V', '?JV?', 'J??V', 'J?V?', 'JV??']);
     });
 
     test("Check for Non-Unique Anagrams", () async {
@@ -55,6 +79,9 @@ void main() {
     test("Using . for blanks", () async {
       expect(await searchForAnagrams("WZOI..", "CSW21"), ["HOWZIT", "WHIZZO"]);
     });
+    test("Blank spaces of input should be trimmed", () async {
+      expect(await searchForAnagrams("WZOI.. ", "CSW21"), ["HOWZIT", "WHIZZO"]);
+    });
   });
 
   group("Testing Pattern Search", () {
@@ -71,6 +98,9 @@ void main() {
     });
     test("Test F?P", () async {
       expect(await searchForPatterns("F?P", "CSW21"), ["FAP", "FOP"]);
+    });
+    test("Test trailing space in input", () async {
+      expect(await searchForPatterns("F?P ", "CSW21"), ["FAP", "FOP"]);
     });
   });
 

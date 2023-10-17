@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-import "package:scrabbly/services/get_definition.dart";
-import "package:scrabbly/widgets/review_list/utils.dart";
+import "package:pangolin/services/get_definition.dart";
+import "package:pangolin/widgets/review_list/utils.dart";
 
 Future<void> processDefinition(BuildContext context, String displayWord) async {
   // Show circular progress

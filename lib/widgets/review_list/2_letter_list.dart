@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:scrabbly/pages/custom_review_page.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
-import 'package:scrabbly/services/search_service.dart';
-import 'package:scrabbly/widgets/review_list/utils.dart';
+import 'package:pangolin/pages/custom_review_page.dart';
+import 'package:pangolin/providers/word_review_provider.dart';
+import 'package:pangolin/services/search_service.dart';
+import 'package:pangolin/widgets/review_list/utils.dart';
 
 class SpawnTwoLetterReviewList extends StatelessWidget {
   const SpawnTwoLetterReviewList({super.key});

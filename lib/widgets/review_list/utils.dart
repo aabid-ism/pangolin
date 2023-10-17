@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:scrabbly/pages/custom_review_page.dart";
-import "package:scrabbly/providers/word_review_provider.dart";
+import "package:pangolin/pages/custom_review_page.dart";
+import "package:pangolin/providers/word_review_provider.dart";
 
 class ReviewTile {
   final String title;

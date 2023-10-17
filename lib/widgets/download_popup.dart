@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:scrabbly/enums/lexicon.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
-import 'package:scrabbly/services/load_lexicon.dart';
-import 'package:scrabbly/services/save_lexicon.dart';
+import 'package:pangolin/enums/lexicon.dart';
+import 'package:pangolin/providers/word_review_provider.dart';
+import 'package:pangolin/services/load_lexicon.dart';
+import 'package:pangolin/services/save_lexicon.dart';
 
 class DownloadPopup extends StatelessWidget {
   const DownloadPopup({super.key});

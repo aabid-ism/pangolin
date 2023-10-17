@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert'; // For JSON encoding and decoding
 
@@ -10,7 +9,6 @@ Future<List<String>> saveToFavorites(String favWord) async {
   List<String>? favoritesList = jsonDecode(prefs.getString(key) ?? '[]')
       .whereType<String>()
       .toList() as List<String>;
-  ;
 
   // Add the new favorite word to the list
   favoritesList.add(favWord);

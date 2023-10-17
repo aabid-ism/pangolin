@@ -1,10 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
-import "package:scrabbly/services/get_definition.dart";
-import "package:scrabbly/widgets/review_list/utils.dart";
-import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:convert';
+import 'package:pangolin/providers/word_review_provider.dart';
+import "package:pangolin/services/get_definition.dart";
+import "package:pangolin/widgets/review_list/utils.dart";
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
@@ -13,7 +11,7 @@ Future<void> saveReview(BuildContext context) async {
   buildShowDialog(context);
 
   // Get the word list
-  Future.delayed(Duration(seconds: 2));
+  Future.delayed(const Duration(seconds: 2));
 
   var provider = Provider.of<WordStateProvider>(context, listen: false);
   var words = provider.wordList.sublist(provider.currentIndex);

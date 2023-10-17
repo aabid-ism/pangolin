@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "913341406190",
-    "project_id": "scrabbly",
-    "storage_bucket": "scrabbly.appspot.com"
+    "project_id": "pangolin",
+    "storage_bucket": "pangolin.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:913341406190:android:faa9e00dc8d7f4bc2bccff",
         "android_client_info": {
-          "package_name": "com.example.scrabbly"
+          "package_name": "global.serendib.pangolin"
         }
       },
       "oauth_client": [

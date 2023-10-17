@@ -1,49 +1,47 @@
-import 'dart:math';
-
-import 'package:scrabbly/words/CSW21/CSW21_10.dart';
-import 'package:scrabbly/words/CSW21/CSW21_11.dart';
-import 'package:scrabbly/words/CSW21/CSW21_12.dart';
-import 'package:scrabbly/words/CSW21/CSW21_13.dart';
-import 'package:scrabbly/words/CSW21/CSW21_14.dart';
-import 'package:scrabbly/words/CSW21/CSW21_15.dart';
-import 'package:scrabbly/words/CSW21/CSW21_2.dart';
-import 'package:scrabbly/words/CSW21/CSW21_3.dart';
-import 'package:scrabbly/words/CSW21/CSW21_4.dart';
-import 'package:scrabbly/words/CSW21/CSW21_5.dart';
-import 'package:scrabbly/words/CSW21/CSW21_6.dart';
-import 'package:scrabbly/words/CSW21/CSW21_7.dart';
-import 'package:scrabbly/words/CSW21/CSW21_8.dart';
-import 'package:scrabbly/words/CSW21/CSW21_9.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_10_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_11_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_12_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_13_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_14_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_15_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_2_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_3_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_4_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_5_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_6_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_7_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_8_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_ANAGRAMS/CSW21_9_ANAGRAMS.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_10_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_11_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_12_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_13_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_14_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_15_SORTED.dart';
+import 'package:pangolin/words/CSW21/CSW21_10.dart';
+import 'package:pangolin/words/CSW21/CSW21_11.dart';
+import 'package:pangolin/words/CSW21/CSW21_12.dart';
+import 'package:pangolin/words/CSW21/CSW21_13.dart';
+import 'package:pangolin/words/CSW21/CSW21_14.dart';
+import 'package:pangolin/words/CSW21/CSW21_15.dart';
+import 'package:pangolin/words/CSW21/CSW21_2.dart';
+import 'package:pangolin/words/CSW21/CSW21_3.dart';
+import 'package:pangolin/words/CSW21/CSW21_4.dart';
+import 'package:pangolin/words/CSW21/CSW21_5.dart';
+import 'package:pangolin/words/CSW21/CSW21_6.dart';
+import 'package:pangolin/words/CSW21/CSW21_7.dart';
+import 'package:pangolin/words/CSW21/CSW21_8.dart';
+import 'package:pangolin/words/CSW21/CSW21_9.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_10_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_11_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_12_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_13_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_14_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_15_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_2_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_3_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_4_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_5_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_6_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_7_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_8_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_ANAGRAMS/CSW21_9_ANAGRAMS.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_10_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_11_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_12_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_13_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_14_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_15_SORTED.dart';
 import 'dart:async';
 
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_2_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_3_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_4_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_5_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_6_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_7_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_8_SORTED.dart';
-import 'package:scrabbly/words/CSW21_SORTED/CSW21_9_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_2_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_3_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_4_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_5_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_6_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_7_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_8_SORTED.dart';
+import 'package:pangolin/words/CSW21_SORTED/CSW21_9_SORTED.dart';
 
 import '../words/NWL20/NWL20_10.dart';
 import '../words/NWL20/NWL20_11.dart';
@@ -196,7 +194,7 @@ Map<String, List<String>> NWL20_lengthToProbabilityArray = {
 
 Future<List<String>> searchForAnagrams(String input, String lexicon) async {
   // sanitize input
-  var sanitizedInput = input.toUpperCase();
+  var sanitizedInput = input.trim().toUpperCase();
   sanitizedInput = sanitizedInput.replaceAll(".", "?");
   var length = sanitizedInput.length;
 
@@ -213,19 +211,18 @@ Future<List<String>> searchForAnagrams(String input, String lexicon) async {
 
 Future<List<String>> searchForPatterns(String input, String lexicon) async {
   // sanitize input
-  String newInput = input.toUpperCase();
-  newInput = newInput.replaceAll(".", "?");
-
+  var sanitizedInput = input.trim().toUpperCase();
+  sanitizedInput = sanitizedInput.replaceAll(".", "?");
   // get correct list from lexicon
   late List<String>? correctList;
-  int length = input.length;
+  int length = sanitizedInput.length;
   switch (lexicon) {
     case "CSW21":
       correctList = CSW_lengthToSortedWordsArray[length.toString()];
     case "NWL20":
       correctList = NWL20_lengthToSortedWordsArray[length.toString()];
   }
-  return await _searchForPatterns(newInput, correctList ?? []);
+  return await _searchForPatterns2(sanitizedInput, correctList ?? []);
 }
 
 Future<List<String>> searchForProbability(
@@ -276,54 +273,66 @@ Future<List<String>> _searchForProbability(
     max = correctList.length;
   }
   int protectedMin = min - 1 < 0 ? 0 : min - 1;
-  List<String> returnList = correctList!.sublist(protectedMin, max);
+  List<String> returnList = correctList.sublist(protectedMin, max);
 
   return returnList;
 }
 
-Future<List<String>> _searchForPatterns(
-    String input, List<String>? correctList) async {
-  // assert(input.length > 1 && input.length < 16);
-  List<String> matchingWords = [];
-  // late List<String>? correctList;
-  // correctList = CSW_lengthToSortedWordsArray[input.length.toString()] ?? [];
+// Future<List<String>> _searchForPatterns(
+//     String input, List<String>? correctList) async {
+//   // assert(input.length > 1 && input.length < 16);
+//   List<String> matchingWords = [];
+//   // late List<String>? correctList;
+//   // correctList = CSW_lengthToSortedWordsArray[input.length.toString()] ?? [];
 
-  void recursiveHelper(String prefix, int remainingBlanks) {
-    // if no remaining blanks, check for pattern
-    if (remainingBlanks == 0) {
-      if (correctList!.contains(prefix)) {
-        matchingWords.add(prefix);
+//   void recursiveHelper(String prefix, int remainingBlanks) {
+//     // if no remaining blanks, check for pattern
+//     if (remainingBlanks == 0) {
+//       if (correctList!.contains(prefix)) {
+//         matchingWords.add(prefix);
+//       }
+//       return;
+//     } else {
+//       for (int i = 0; i < alphabet.length; i++) {
+//         // replace the first remaining blank in prefix with alphabet[i]
+//         String newPrefix = prefix.replaceFirst("?", alphabet[i]);
+//         int newRemainingBlanks = remainingBlanks - 1;
+//         recursiveHelper(newPrefix, newRemainingBlanks);
+//       }
+//     }
+//   }
+
+//   int blanks = input.split("?").length - 1;
+
+//   // send in word and number of blanks as arguments
+//   recursiveHelper(input, blanks);
+
+//   return matchingWords;
+// }
+
+Future<List<String>> _searchForPatterns2(
+    String input, List<String>? correctList) async {
+  List<String> possibleWords = [];
+
+  for (String word in correctList!) {
+    bool valid = true;
+    for (int i = 0; i < word.length; i++) {
+      if (input[i] != '?' && input[i] != word[i]) {
+        valid = false;
+        break;
       }
-      return;
-    } else {
-      for (int i = 0; i < alphabet.length; i++) {
-        // replace the first remaining blank in prefix with alphabet[i]
-        String newPrefix = prefix.replaceFirst("?", alphabet[i]);
-        int newRemainingBlanks = remainingBlanks - 1;
-        recursiveHelper(newPrefix, newRemainingBlanks);
-      }
+    }
+    if (valid) {
+      possibleWords.add(word);
     }
   }
 
-  int blanks = input.split("?").length - 1;
-
-  // send in word and number of blanks as arguments
-  recursiveHelper(input, blanks);
-
-  return matchingWords;
+  return possibleWords;
 }
 
-Future<List<String>> _searchForAnagrams(
+Future<List<String>> _searchForAnagramsOld(
     String sanitizedInput, Map<String, List<String>>? correctList) async {
   result = [];
-  // var sanitizedInput = input.toUpperCase();
-  // sanitizedInput = sanitizedInput.replaceAll(".", "?");
-  // var inputStringLength = sanitizedInput.length;
-
-  // late Map<String, List<String>>? correctList;
-  // correctList = CSW_lengthToAnagramWordsArrayMap[inputStringLength.toString()];
-
-  // Convert input anagram string to its alphabetic form
   var sortedInputList = sanitizedInput.split('')..sort();
   var sortedInputString = sortedInputList.join();
 
@@ -379,3 +388,70 @@ Future<List<String>> _searchForAnagrams(
 
   return result ?? [];
 }
+
+Future<List<String>> _searchForAnagrams(
+    String input, Map<String, List<String>>? correctList) async {
+  Set<String> anagrams = Set<String>(); // Use a Set instead of a List
+
+  List<String> allPossibleAlphanagrams = generateAlphabeticStrings(input);
+
+  // edge cases
+  if (correctList == null) {
+    return [];
+  }
+  var sortedInputList = input.split('')..sort();
+  var sortedInputString = sortedInputList.join();
+  if (!input.contains("?")) {
+    return correctList[sortedInputString] ?? [];
+  }
+  // for each key in the anagram map
+  for (String keyAlphanagram in correctList!.keys) {
+    for (int i = 0; i < allPossibleAlphanagrams.length; i++) {
+      bool valid = true;
+
+      String currPossibleAlphanagram = allPossibleAlphanagrams[i];
+      for (int j = 0; j < currPossibleAlphanagram.length; j++) {
+        if (currPossibleAlphanagram[j] != '?' &&
+            currPossibleAlphanagram[j] != keyAlphanagram[j]) {
+          valid = false;
+          break;
+        }
+      }
+      if (valid) {
+        anagrams.addAll(correctList[keyAlphanagram]!);
+      }
+    }
+  }
+
+  return anagrams.toList(); // Convert the Set to a List before returning
+}
+
+List<String> generateAlphabeticStrings(String inputString) {
+  List<String> characters = inputString.split('');
+
+  List<String> questionMarks = characters.where((char) => char == '?').toList();
+
+  characters.removeWhere((char) => char == '?');
+
+  characters.sort();
+
+  Set<String> result = {(characters.join())};
+
+  for (int i = 0; i < questionMarks.length; i++) {
+    Set<String> newResult = Set();
+    for (String str in result) {
+      for (int j = 0; j <= str.length; j++) {
+        String newString =
+            str.substring(0, j) + questionMarks[i] + str.substring(j);
+        newResult.add(newString);
+      }
+    }
+    result = Set.from(newResult);
+  }
+
+  return result.toList(); // Convert back to a list for consistent output.
+}
+
+// void main() {
+//   _searchForAnagrams("ZYZZYV?", CSW21_7_ANAGRAMS);
+// }

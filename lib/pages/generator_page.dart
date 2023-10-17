@@ -1,14 +1,16 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:scrabbly/models/BigCard.dart";
-import "package:scrabbly/providers/word_review_provider.dart";
-import "package:scrabbly/services/get_definition.dart";
-import "package:scrabbly/services/process_definition.dart";
-import "package:scrabbly/widgets/definitions_popup.dart";
-import "package:scrabbly/widgets/download_popup.dart";
-import "package:scrabbly/widgets/review_list/utils.dart";
+import "package:pangolin/models/BigCard.dart";
+import "package:pangolin/providers/word_review_provider.dart";
+import "package:pangolin/services/get_definition.dart";
+import "package:pangolin/services/process_definition.dart";
+import "package:pangolin/widgets/definitions_popup.dart";
+import "package:pangolin/widgets/download_popup.dart";
+import "package:pangolin/widgets/review_list/utils.dart";
 
 class GeneratorPage extends StatefulWidget {
+  const GeneratorPage({super.key});
+
   @override
   State<GeneratorPage> createState() => _GeneratorPageState();
 }
@@ -120,9 +122,9 @@ class _HistoryListViewState extends State<HistoryListView> {
   @override
   Widget build(BuildContext context) {
     final appState = context.watch<WordStateProvider>();
-    var _key = GlobalKey();
+    var key = GlobalKey();
 
-    appState.historyListKey = _key;
+    appState.historyListKey = key;
 
     return ShaderMask(
       shaderCallback: (bounds) => _maskingGradient.createShader(bounds),
@@ -130,7 +132,7 @@ class _HistoryListViewState extends State<HistoryListView> {
       // and applies it to the destination (i.e. our animated list).
       blendMode: BlendMode.dstIn,
       child: AnimatedList(
-        key: _key,
+        key: key,
         reverse: true,
         padding: const EdgeInsets.only(top: 100),
         initialItemCount: appState.history.length,

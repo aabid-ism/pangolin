@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:scrabbly/services/get_definition.dart';
-import 'package:scrabbly/services/search_service.dart';
+import 'package:pangolin/services/get_definition.dart';
+import 'package:pangolin/services/search_service.dart';
 
 void main() {
   group("Check for Definitions", () {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:scrabbly/services/get_definition.dart';
+import 'package:pangolin/services/get_definition.dart';
 
 class DefinitionsPopup extends StatelessWidget {
   final String displayWord;
 
-  DefinitionsPopup({Key? key, required this.displayWord}) : super(key: key);
+  const DefinitionsPopup({Key? key, required this.displayWord}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

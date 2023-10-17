@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:scrabbly/enums/lexicon.dart';
-import 'package:scrabbly/pages/custom_review_page.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
-import 'package:scrabbly/services/search_service.dart';
-import 'package:scrabbly/widgets/review_list/2_letter_list.dart';
-import 'package:scrabbly/widgets/review_list/utils.dart';
+import 'package:pangolin/enums/lexicon.dart';
+import 'package:pangolin/pages/custom_review_page.dart';
+import 'package:pangolin/providers/word_review_provider.dart';
+import 'package:pangolin/services/search_service.dart';
+import 'package:pangolin/widgets/review_list/2_letter_list.dart';
+import 'package:pangolin/widgets/review_list/utils.dart';
 
 class SpawnEightProbReviewList extends StatelessWidget {
   const SpawnEightProbReviewList({super.key});
@@ -41,7 +41,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '75 to 100 Sevens',
+        '75 to 100 Eights',
         'Words 75 to 100 ranked by probability order',
         () {
           return searchForProbability(
@@ -49,7 +49,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '100 to 150 Sevens',
+        '100 to 150 Eights',
         'Words 100 to 150 ranked by probability order',
         () {
           return searchForProbability(
@@ -57,7 +57,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '150 to 200 Sevens',
+        '150 to 200 Eights',
         'Words 150 to 200 ranked by probability order',
         () {
           return searchForProbability(
@@ -65,7 +65,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '200 to 250 Sevens',
+        '200 to 250 Eights',
         'Words 200 to 250 ranked by probability order',
         () {
           return searchForProbability(
@@ -73,7 +73,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '250 to 300 Sevens',
+        '250 to 300 Eights',
         'Words 250 to 300 ranked by probability order',
         () {
           return searchForProbability(
@@ -81,7 +81,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '300 to 350 Sevens',
+        '300 to 350 Eights',
         'Words 300 to 350 ranked by probability order',
         () {
           return searchForProbability(
@@ -89,7 +89,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '350 to 400 Sevens',
+        '350 to 400 Eights',
         'Words 350 to 400 ranked by probability order',
         () {
           return searchForProbability(
@@ -97,7 +97,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '400 to 450 Sevens',
+        '400 to 450 Eights',
         'Words 400 to 450 ranked by probability order',
         () {
           return searchForProbability(
@@ -105,7 +105,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '450 to 500 Sevens',
+        '450 to 500 Eights',
         'Words 450 to 500 ranked by probability order',
         () {
           return searchForProbability(
@@ -113,7 +113,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '500 to 550 Sevens',
+        '500 to 550 Eights',
         'Words 500 to 550 ranked by probability order',
         () {
           return searchForProbability(
@@ -121,7 +121,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '550 to 600 Sevens',
+        '550 to 600 Eights',
         'Words 550 to 600 ranked by probability order',
         () {
           return searchForProbability(
@@ -129,7 +129,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '600 to 650 Sevens',
+        '600 to 650 Eights',
         'Words 600 to 650 ranked by probability order',
         () {
           return searchForProbability(
@@ -137,7 +137,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '650 to 700 Sevens',
+        '650 to 700 Eights',
         'Words 650 to 700 ranked by probability order',
         () {
           return searchForProbability(
@@ -145,7 +145,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '700 to 750 Sevens',
+        '700 to 750 Eights',
         'Words 700 to 750 ranked by probability order',
         () {
           return searchForProbability(
@@ -153,7 +153,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '750 to 800 Sevens',
+        '750 to 800 Eights',
         'Words 750 to 800 ranked by probability order',
         () {
           return searchForProbability(
@@ -161,7 +161,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '800 to 850 Sevens',
+        '800 to 850 Eights',
         'Words 800 to 850 ranked by probability order',
         () {
           return searchForProbability(
@@ -169,7 +169,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '850 to 900 Sevens',
+        '850 to 900 Eights',
         'Words 850 to 900 ranked by probability order',
         () {
           return searchForProbability(
@@ -177,7 +177,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '900 to 950 Sevens',
+        '900 to 950 Eights',
         'Words 900 to 950 ranked by probability order',
         () {
           return searchForProbability(
@@ -185,7 +185,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
         },
       ),
       ReviewTile(
-        '950 to 1000 Sevens',
+        '950 to 1000 Eights',
         'Words 950 to 1000 ranked by probability order',
         () {
           return searchForProbability(
@@ -197,7 +197,7 @@ class SpawnEightProbReviewList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: colorScheme.surfaceVariant,
-        title: const Text('Sevens by Probability'),
+        title: const Text('Eights by Probability'),
       ),
       body: ListView.builder(
         itemCount: myReviewTiles.length,

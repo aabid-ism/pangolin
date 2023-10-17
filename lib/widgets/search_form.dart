@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:scrabbly/pages/custom_review_page.dart';
-import 'package:scrabbly/providers/word_review_provider.dart';
-import 'package:scrabbly/services/process_definition.dart';
-import 'package:scrabbly/services/search_service.dart';
-import 'package:scrabbly/widgets/definitions_popup.dart';
-import 'package:scrabbly/widgets/download_popup.dart';
+import 'package:pangolin/pages/custom_review_page.dart';
+import 'package:pangolin/providers/word_review_provider.dart';
+import 'package:pangolin/services/process_definition.dart';
+import 'package:pangolin/services/search_service.dart';
+import 'package:pangolin/widgets/definitions_popup.dart';
+import 'package:pangolin/widgets/download_popup.dart';
 
 class SearchForm extends StatefulWidget {
   const SearchForm({super.key});
@@ -136,7 +136,6 @@ class SearchFormState extends State<SearchForm> {
                     return const DownloadPopup();
                   },
                 );
-                print(provider.lexicon.lexiconString);
               },
               child: Text(provider.lexicon.lexiconString),
             ),

@@ -1,13 +1,13 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:scrabbly/pages/favorites_page.dart";
-import "package:scrabbly/pages/generator_page.dart";
-import "package:scrabbly/pages/review_page.dart";
-import "package:scrabbly/pages/review_topics_page.dart";
-import 'package:scrabbly/pages/search_page.dart';
-import "package:scrabbly/pages/settings_page.dart";
-import "package:scrabbly/providers/word_review_provider.dart";
-import "package:scrabbly/widgets/download_popup.dart";
+import "package:pangolin/pages/favorites_page.dart";
+import "package:pangolin/pages/generator_page.dart";
+import "package:pangolin/pages/review_page.dart";
+import "package:pangolin/pages/review_topics_page.dart";
+import 'package:pangolin/pages/search_page.dart';
+import "package:pangolin/pages/settings_page.dart";
+import "package:pangolin/providers/word_review_provider.dart";
+import "package:pangolin/widgets/download_popup.dart";
 
 class MyHomePage extends StatefulWidget {
   final String? lexicon;
