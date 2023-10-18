@@ -224,9 +224,9 @@ class SearchFormState extends State<SearchForm> {
                               if (value == null || value.isEmpty) {
                                 return 'Please enter some text';
                               }
-                              if (value.length == 1) {
-                                return 'Please enter more than one character';
-                              }
+                              // if (value.length == 1) {
+                              //   return 'Please enter more than one character';
+                              // }
                               return null;
                             },
                           ),
@@ -361,7 +361,9 @@ class SearchFormState extends State<SearchForm> {
                         child: ElevatedButton(
                           onPressed: () {
                             // Validate returns true if the form is valid, or false otherwise.
-                            if (_formKey.currentState!.validate()) {
+                            if (_formKey.currentState!.validate() &&
+                                provider.searchWordList.isNotEmpty) {
+                              print("aiyo");
                               // launch review
                               provider.makeSearchBecomeReviewWordList();
                               Navigator.push(
