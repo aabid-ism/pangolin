@@ -8,21 +8,21 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-    var appState = context.watch<WordStateProvider>();
+    // var theme = Theme.of(context);
+    // var appState = context.watch<WordStateProvider>();
 
-    // if (appState.favorites.isEmpty) {
-    //   return const Center(
-    //     child: Text('No favorites yet.'),
-    //   );
-    // }
+    // // if (appState.favorites.isEmpty) {
+    // //   return const Center(
+    // //     child: Text('No favorites yet.'),
+    // //   );
+    // // }
 
-    // return Column(
-    //   crossAxisAlignment: CrossAxisAlignment.start,
-    //   children: [
-    //     Padding(padding: const EdgeInsets.all(30), child: SearchForm()),
-    //   ],
-    // );
-    return SearchForm();
+    // // return Column(
+    // //   crossAxisAlignment: CrossAxisAlignment.start,
+    // //   children: [
+    // //     Padding(padding: const EdgeInsets.all(30), child: SearchForm()),
+    // //   ],
+    // // );
+    return const SearchForm();
   }
 }

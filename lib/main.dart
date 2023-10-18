@@ -43,7 +43,6 @@ class _MyAppState extends State<MyApp> {
   };
   @override
   Widget build(BuildContext context) {
-    print("refreshed main.dart");
     return ChangeNotifierProvider(
         create: (context) =>
             WordStateProvider(widget.initialThemeString ?? "Blue Grey"),

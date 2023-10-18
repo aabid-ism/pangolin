@@ -2,11 +2,7 @@ import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:pangolin/models/BigCard.dart";
 import "package:pangolin/providers/word_review_provider.dart";
-import "package:pangolin/services/get_definition.dart";
 import "package:pangolin/services/process_definition.dart";
-import "package:pangolin/widgets/definitions_popup.dart";
-import "package:pangolin/widgets/download_popup.dart";
-import "package:pangolin/widgets/review_list/utils.dart";
 
 class GeneratorPage extends StatefulWidget {
   const GeneratorPage({super.key});

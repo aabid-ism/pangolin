@@ -5,7 +5,6 @@ import 'package:pangolin/pages/custom_review_page.dart';
 import 'package:pangolin/providers/word_review_provider.dart';
 import 'package:pangolin/services/process_definition.dart';
 import 'package:pangolin/services/search_service.dart';
-import 'package:pangolin/widgets/definitions_popup.dart';
 import 'package:pangolin/widgets/download_popup.dart';
 
 class SearchForm extends StatefulWidget {
@@ -36,11 +35,20 @@ class SearchFormState extends State<SearchForm> {
 
   bool isLoading = false;
   Timer? _debounce;
+  late FocusNode myFocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    myFocusNode = FocusNode();
+  }
+
   @override
   void dispose() {
     minController.dispose();
     maxController.dispose();
     myController.dispose();
+    myFocusNode.dispose();
     super.dispose();
   }
 
@@ -203,6 +211,7 @@ class SearchFormState extends State<SearchForm> {
                           child: TextFormField(
                             controller: myController,
                             autofocus: false,
+                            focusNode: myFocusNode,
                             onChanged: (value) => {displayWordList(value)},
                             decoration: InputDecoration(
                               suffixIcon: IconButton(
@@ -344,8 +353,20 @@ class SearchFormState extends State<SearchForm> {
                               if (_searchTypeDropdownValue == "Probability") {
                                 displayProbability(_lengthDropdownValue,
                                     minController.text, maxController.text);
+                                FocusScopeNode currentFocus =
+                                    FocusScope.of(context);
+
+                                if (!currentFocus.hasPrimaryFocus) {
+                                  currentFocus.unfocus();
+                                }
                               } else {
                                 displayWordList(myController.text);
+                                FocusScopeNode currentFocus =
+                                    FocusScope.of(context);
+
+                                if (!currentFocus.hasPrimaryFocus) {
+                                  currentFocus.unfocus();
+                                }
                               }
                             }
                           },
@@ -422,11 +443,6 @@ class SearchFormState extends State<SearchForm> {
                                     ? const Icon(Icons.favorite, size: 12)
                                     : const Icon(Icons.favorite_border,
                                         size: 12),
-                                // label: Text(
-                                //   provider.searchWordList[index],
-                                //   semanticsLabel:
-                                //       provider.searchWordList[index],
-                                // ),
                               ),
                             );
                           },

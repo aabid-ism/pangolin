@@ -2,7 +2,6 @@ import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:pangolin/pages/favorites_page.dart";
 import "package:pangolin/pages/generator_page.dart";
-import "package:pangolin/pages/review_page.dart";
 import "package:pangolin/pages/review_topics_page.dart";
 import 'package:pangolin/pages/search_page.dart';
 import "package:pangolin/pages/settings_page.dart";
@@ -50,18 +49,18 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget page;
     switch (selectedIndex) {
       case 0:
-        page = GeneratorPage();
+        page = const GeneratorPage();
         break;
       case 1:
-        page = SearchPage();
+        page = const SearchPage();
         break;
       case 2:
-        page = ReviewTopicsPage();
+        page = const ReviewTopicsPage();
         break;
       case 3:
-        page = FavoritesPage();
+        page = const FavoritesPage();
       case 4:
-        page = SettingsPage();
+        page = const SettingsPage();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
