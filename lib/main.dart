@@ -2,12 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:pangolin/pages/favorites_page.dart';
-import 'package:pangolin/pages/generator_page.dart';
 import 'package:pangolin/pages/home_page.dart';
-import 'package:pangolin/pages/search_page.dart';
 import 'package:pangolin/services/save_theme.dart';
-import 'package:pangolin/widgets/download_popup.dart';
 import "providers/word_review_provider.dart";
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
 import 'package:pangolin/providers/word_review_provider.dart';
-import "package:pangolin/services/get_definition.dart";
 import "package:pangolin/widgets/review_list/utils.dart";
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';

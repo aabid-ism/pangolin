@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pangolin/enums/lexicon.dart';
 import 'package:pangolin/services/save_favorites.dart';
 import 'package:pangolin/services/save_theme.dart';
-import 'package:pangolin/words/CSW21/CSW21_2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WordStateProvider extends ChangeNotifier {

@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import "package:provider/provider.dart";
-import "package:pangolin/providers/word_review_provider.dart";
 import "package:pangolin/widgets/search_form.dart";
 
 class SearchPage extends StatelessWidget {

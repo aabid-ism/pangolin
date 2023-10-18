@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:pangolin/pages/custom_review_page.dart';
 import 'package:pangolin/providers/word_review_provider.dart';
 import 'package:pangolin/services/search_service.dart';
 import 'package:pangolin/widgets/review_list/utils.dart';
