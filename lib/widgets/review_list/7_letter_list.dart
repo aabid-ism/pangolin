@@ -5,7 +5,7 @@ import 'package:pangolin/pages/custom_review_page.dart';
 import 'package:pangolin/providers/word_review_provider.dart';
 import 'package:pangolin/services/search_service.dart';
 import 'package:pangolin/widgets/review_list/2_letter_list.dart';
-import 'package:pangolin/widgets/review_list/utils.dart';
+import 'package:pangolin/widgets/utils.dart';
 
 class SpawnSevenLetterReviewList extends StatelessWidget {
   const SpawnSevenLetterReviewList({super.key});

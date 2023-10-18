@@ -1,7 +1,9 @@
 import "package:flutter/material.dart";
+import 'package:pangolin/pages/saved_list.dart';
+import 'package:pangolin/widgets/custom_name_for_review.dart';
 import 'package:provider/provider.dart';
 import 'package:pangolin/providers/word_review_provider.dart';
-import "package:pangolin/widgets/review_list/utils.dart";
+import 'package:pangolin/widgets/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
@@ -17,7 +19,7 @@ Future<void> saveReview(BuildContext context) async {
   // Pop off circular progress
   // ignore: use_build_context_synchronously
   Navigator.of(context).pop();
-
+  List<String> customNames = await retrieveCustomNames();
   // Show a dialog with definitions
   // ignore: use_build_context_synchronously
   showDialog(
@@ -31,53 +33,38 @@ Future<void> saveReview(BuildContext context) async {
           children: [
             TextButton(
               onPressed: () async {
-                buildShowDialog(context);
-                await saveWordsToPrefs(words, "Slot 1");
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
-                savedSuccessSnackBar(1, context);
+                showCustomReviewNamePopUp(context, "Slot 1", words);
               },
-              child: const Text("Slot 1"),
+              child: Text(customNames[0]),
             ),
             TextButton(
               onPressed: () async {
-                buildShowDialog(context);
-                await saveWordsToPrefs(words, "Slot 2");
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
-                savedSuccessSnackBar(2, context);
+                showCustomReviewNamePopUp(context, "Slot 2", words);
               },
-              child: const Text("Slot 2"),
+              child: Text(customNames[1]),
             ),
             TextButton(
               onPressed: () async {
-                buildShowDialog(context);
-                await saveWordsToPrefs(words, "Slot 3");
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
-                savedSuccessSnackBar(3, context);
+                showCustomReviewNamePopUp(context, "Slot 3", words);
               },
-              child: const Text("Slot 3"),
+              child: Text(customNames[2]),
             ),
             TextButton(
               onPressed: () async {
-                buildShowDialog(context);
-                await saveWordsToPrefs(words, "Slot 4");
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
-                savedSuccessSnackBar(4, context);
+                showCustomReviewNamePopUp(context, "Slot 4", words);
               },
-              child: const Text("Slot 4"),
+              child: Text(customNames[3]),
             ),
             TextButton(
               onPressed: () async {
-                buildShowDialog(context);
-                await saveWordsToPrefs(words, "Slot 5");
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
-                savedSuccessSnackBar(5, context);
+                showCustomReviewNamePopUp(context, "Slot 5", words);
               },
-              child: const Text("Slot 5"),
+              child: Text(customNames[4]),
             ),
           ],
         ),
@@ -114,10 +101,22 @@ Future<List<String>> getWordsFromPrefs(String listKey) async {
   return List<String>.from(words);
 }
 
+// Function to save a custom name under a listKey
+Future<void> saveWordListName(String listKey, String customName) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setString('${listKey}name', customName);
+}
+
+Future<String> getWordListName(String listKey) async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getString('${listKey}name') ?? listKey;
+}
+
 savedSuccessSnackBar(int slot, BuildContext context) {
   var snackBar = SnackBar(
     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-    content: Text('Successfully saved to slot $slot '),
+    content: const Text('Successfully saved to review later!'),
+    duration: const Duration(seconds: 1), // Adjust the duration here
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }

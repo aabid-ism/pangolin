@@ -124,6 +124,22 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                     ExpansionTile(
                       title: Text(
+                        'I saved a Review. Where did it go?',
+                        style: TextStyle(
+                          fontSize: 15, // You can adjust the size as needed
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                      // subtitle: Text('Trailing expansion arrow icon'),
+                      children: <Widget>[
+                        ListTile(
+                          title: Text(
+                              'Go to the Review tab. Then click on the \'Saved\' button. You can view your saved Reviews here.'),
+                        ),
+                      ],
+                    ),
+                    ExpansionTile(
+                      title: Text(
                         'How do I create a custom Review?',
                         style: TextStyle(
                           fontSize: 15, // You can adjust the size as needed

@@ -7,7 +7,7 @@ import 'package:pangolin/widgets/review_list/5_letter_list.dart';
 import 'package:pangolin/widgets/review_list/7_letter_list.dart';
 import 'package:pangolin/widgets/review_list/7_letter_prob_list.dart';
 import 'package:pangolin/widgets/review_list/8_letter_prob.dart';
-import 'package:pangolin/widgets/review_list/saved_list.dart';
+import 'package:pangolin/pages/saved_list.dart';
 
 class ReviewTopicsPage extends StatefulWidget {
   const ReviewTopicsPage({super.key});
