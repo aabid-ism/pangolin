@@ -330,64 +330,64 @@ Future<List<String>> _searchForPatterns2(
   return possibleWords;
 }
 
-Future<List<String>> _searchForAnagramsOld(
-    String sanitizedInput, Map<String, List<String>>? correctList) async {
-  result = [];
-  var sortedInputList = sanitizedInput.split('')..sort();
-  var sortedInputString = sortedInputList.join();
+// Future<List<String>> _searchForAnagramsOld(
+//     String sanitizedInput, Map<String, List<String>>? correctList) async {
+//   result = [];
+//   var sortedInputList = sanitizedInput.split('')..sort();
+//   var sortedInputString = sortedInputList.join();
 
-  int numberOfBlanks = sortedInputString.split("?").length - 1;
+//   int numberOfBlanks = sortedInputString.split("?").length - 1;
 
-  void searchAcross0Blanks() {
-    result = correctList?[sortedInputString];
-  }
+//   void searchAcross0Blanks() {
+//     result = correctList?[sortedInputString];
+//   }
 
-  void searchAcross1Blanks() {
-    // Use a for loop to iterate through each letter
-    for (int i = 0; i < alphabet.length; i++) {
-      String newQueryString = sortedInputString.replaceFirst("?", alphabet[i]);
-      var list = newQueryString.split('')..sort();
-      newQueryString = list.join();
-      List<String>? tempResult = correctList?[newQueryString];
+//   void searchAcross1Blanks() {
+//     // Use a for loop to iterate through each letter
+//     for (int i = 0; i < alphabet.length; i++) {
+//       String newQueryString = sortedInputString.replaceFirst("?", alphabet[i]);
+//       var list = newQueryString.split('')..sort();
+//       newQueryString = list.join();
+//       List<String>? tempResult = correctList?[newQueryString];
 
-      if (tempResult != null) {
-        result?.addAll(tempResult);
-      }
-    }
-  }
+//       if (tempResult != null) {
+//         result?.addAll(tempResult);
+//       }
+//     }
+//   }
 
-  void searchAcross2Blanks() {
-    // Use a for loop to iterate through each letter
-    for (int i = 0; i < alphabet.length; i++) {
-      String firstQueryString =
-          sortedInputString.replaceFirst("?", alphabet[i]);
-      for (int j = 0; j < alphabet.length; j++) {
-        String secondQueryString =
-            firstQueryString.replaceFirst("?", alphabet[j]);
-        var templist = secondQueryString.split('')..sort();
-        secondQueryString = templist.join();
-        List<String>? tempResult = correctList?[secondQueryString];
-        if (tempResult != null && result!.contains(tempResult[0]) == false) {
-          result?.addAll(tempResult);
-        }
-      }
-    }
-  }
+//   void searchAcross2Blanks() {
+//     // Use a for loop to iterate through each letter
+//     for (int i = 0; i < alphabet.length; i++) {
+//       String firstQueryString =
+//           sortedInputString.replaceFirst("?", alphabet[i]);
+//       for (int j = 0; j < alphabet.length; j++) {
+//         String secondQueryString =
+//             firstQueryString.replaceFirst("?", alphabet[j]);
+//         var templist = secondQueryString.split('')..sort();
+//         secondQueryString = templist.join();
+//         List<String>? tempResult = correctList?[secondQueryString];
+//         if (tempResult != null && result!.contains(tempResult[0]) == false) {
+//           result?.addAll(tempResult);
+//         }
+//       }
+//     }
+//   }
 
-  void searchAcross3Blanks() {}
+//   void searchAcross3Blanks() {}
 
-  if (numberOfBlanks == 0) {
-    searchAcross0Blanks();
-  } else if (numberOfBlanks == 1) {
-    searchAcross1Blanks();
-  } else if (numberOfBlanks == 2) {
-    searchAcross2Blanks();
-  } else {
-    searchAcross3Blanks();
-  }
+//   if (numberOfBlanks == 0) {
+//     searchAcross0Blanks();
+//   } else if (numberOfBlanks == 1) {
+//     searchAcross1Blanks();
+//   } else if (numberOfBlanks == 2) {
+//     searchAcross2Blanks();
+//   } else {
+//     searchAcross3Blanks();
+//   }
 
-  return result ?? [];
-}
+//   return result ?? [];
+// }
 
 Future<List<String>> _searchForAnagrams(
     String input, Map<String, List<String>>? correctList) async {
@@ -405,7 +405,7 @@ Future<List<String>> _searchForAnagrams(
     return correctList[sortedInputString] ?? [];
   }
   // for each key in the anagram map
-  for (String keyAlphanagram in correctList!.keys) {
+  for (String keyAlphanagram in correctList.keys) {
     for (int i = 0; i < allPossibleAlphanagrams.length; i++) {
       bool valid = true;
 

@@ -139,7 +139,7 @@ class WordStateProvider extends ChangeNotifier {
   }
 
   void launchStartUpWords() {
-    wordList = ["SCRABBLE", "IS", "FUN", "INTENSE", "CREATIVE", "BEAUTIFUL"];
+    wordList = ["SCRABBLE", "IS", "FUN", "INTENSE", "EXCITING"];
     for (var word in wordList) {
       saveToFavorites(word);
     }
