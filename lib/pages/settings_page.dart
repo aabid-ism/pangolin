@@ -150,7 +150,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       children: <Widget>[
                         ListTile(
                           title: Text(
-                              'Step 1: Search for the words using the Search Feature.'),
+                              'Step 1: Search for words in the Search tab.'),
                         ),
                         ListTile(
                           title: Text('Step 2: Click on the Review Button.'),
@@ -168,12 +168,12 @@ class _SettingsPageState extends State<SettingsPage> {
                       children: <Widget>[
                         ListTile(
                             title: Text(
-                                'The save button is located on the bottom right corner of a Review.')),
+                                'The save button is located in the bottom right corner of a review.')),
                       ],
                     ),
                     ExpansionTile(
                       title: Text(
-                        'I clicked \'next\' before liking a word during review. What do i do now?',
+                        'I clicked \'next\' before liking a word during a word review. What do i do now?',
                         style: TextStyle(
                           fontSize: 15, //
                           fontWeight: FontWeight.w300,
@@ -182,13 +182,13 @@ class _SettingsPageState extends State<SettingsPage> {
                       children: <Widget>[
                         ListTile(
                           title: Text(
-                              'The history view of words are scrollable and clickable. You can like and unlike a word by clicking it.'),
+                              'The history view of words is scrollable and clickable. You can like and unlike a word by simply clicking it.'),
                         ),
                       ],
                     ),
                     ExpansionTile(
                       title: Text(
-                        'I have a suggestion for the app. Where do I communicate that?',
+                        'I have a suggestion for the app. How and where do I communicate that?',
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w300,
@@ -197,7 +197,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       children: <Widget>[
                         ListTile(
                           title: Text(
-                              'Please drop a comment on the Playstore app page or Appstore page.'),
+                              'Please write your feedback as a comment on the Play Store or App Store page.'),
                         ),
                       ],
                     ),
